@@ -9,17 +9,38 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^13.1.1",
+    "@tensorflow/tfjs": "^4.11.0",
+    "@tensorflow/tfjs-backend-cpu": "^4.11.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.11.0",
+    "@tensorflow/tfjs-core": "^4.11.0",
+    "@tensorflow/tfjs-tflite": "0.0.1-alpha.9",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "copy-webpack-plugin": "^11.0.0",
+    "daisyui": "^3.7.6",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
+    "jimp": "^0.16.2",
+    "lodash": "^4.17.21",
+    "ndarray": "^1.0.19",
+    "ndarray-ops": "^1.2.2",
     "next": "13.5.1",
+    "next-pwa": "^5.6.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "onnxruntime-web": "^1.16.0",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-webcam": "^7.1.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/ndarray": "^1.0.11",
+    "@types/ndarray-ops": "^1.2.4"
   }
 }
