@@ -61,7 +61,7 @@ export default function MainScreen() {
                     <canvas
                       width={model.inputShape[1]}
                       height={model.inputShape[2]}
-                      className="shadow-2xlabsolute top-0 pt-56"
+                      className="shadow-2xl absolute top-0 pt-56"
                       ref={canvasRef}
                     />
                     <video
