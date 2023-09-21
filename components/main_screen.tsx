@@ -3,6 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl";
 import { detect, detectVideo } from "../utils/detect";
 import Webcam from "react-webcam";
+import Image from "next/image";
 
 export default function MainScreen() {
   const [isClicked, setClick] = useState(false);
@@ -51,9 +52,12 @@ export default function MainScreen() {
         <div className="flex flex-col">
           <div className="justyfy-center align-middle items-center">
             {loading.loading ? (
-              <span>
-                Loading model... {(loading.progress * 100).toFixed(2)}%
-              </span>
+              <div className="flex flex-col gap-4 items-center">
+                <span className="loading loading-infinity loading-lg"></span>
+                <span>
+                  Loading model... {(loading.progress * 100).toFixed(2)}%
+                </span>
+              </div>
             ) : (
               <div className="flex flex-col items-center justify-center gap-10">
                 {isClicked && (
@@ -61,7 +65,7 @@ export default function MainScreen() {
                     <canvas
                       width={model.inputShape[1]}
                       height={model.inputShape[2]}
-                      className="shadow-2xl absolute top-0 pt-56"
+                      className=" absolute top-0 pt-28"
                       ref={canvasRef}
                     />
                     <video
@@ -79,7 +83,18 @@ export default function MainScreen() {
                     />
                   </div>
                 )}
-
+                {isClicked ? (
+                  <></>
+                ) : (
+                  <>
+                    <Image
+                      src={"/model.png"}
+                      alt={"model"}
+                      width={64}
+                      height={64}
+                    />
+                  </>
+                )}
                 <div
                   className="btn hover:shadow-lg hover:btn-error"
                   onClick={() => {

@@ -19,7 +19,7 @@ export default function Home() {
         <div className="drawer-content flex flex-col items-center justify-center">
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden my-10"
+            className="btn btn-info drawer-button lg:hidden my-10"
           >
             Menu
           </label>
@@ -37,11 +37,11 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center">
               <li>
                 <a>
-                  <span className="text-xl">Main</span>
+                  <span className="text-lg">Main</span>
                 </a>
               </li>
               <li>
-                <span className="text-xl">Setting</span>
+                <span className="text-lg">Setting</span>
               </li>
               <li>
                 <span className="text-xl"> </span>
@@ -51,7 +51,7 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center py-10 mt-96">
               <span>Last Updated</span>
               <span className="text-lg">
-                {/* {date.toLocaleDateString() + " " + date.toLocaleTimeString()} */}
+                {date.toLocaleDateString() + " " + date.toLocaleTimeString()}
               </span>
             </div>
           </ul>
